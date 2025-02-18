@@ -6,6 +6,7 @@ export const CategorySchema = z.object({
   slug: z.string(),
   image: z.string(),
   icon: z.string(),
+  color: z.string(),
 });
 
 export const CategoriesSchema = z.array(CategorySchema);
