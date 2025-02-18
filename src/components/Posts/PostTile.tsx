@@ -28,7 +28,7 @@ export default function PostTile({ post }: { post: Post }) {
       <p className="text-gray-600 mb-4 leading6">{post.shortDescription}</p>
 
       <Link
-        href={`/post/${post.id}`}
+        href={`/posts/${post.id}`}
         className="inline-flex items-center text-sm font-medium"
       >
         zobacz więcej

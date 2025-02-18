@@ -1,10 +1,16 @@
 import { Categories, PostsList } from '@/components';
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ categoryId: string }>;
+}) {
+  const { categoryId } = await searchParams;
+
   return (
     <div>
       <Categories />
-      <PostsList />
+      <PostsList categoryId={categoryId} />
     </div>
   );
 }

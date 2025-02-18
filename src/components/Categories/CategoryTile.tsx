@@ -2,10 +2,13 @@
 
 import { Category } from '@/types';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export function CategoryTile({ category }: { category: Category }) {
+  const router = useRouter();
+
   const handleClickCategory = (id: string) => {
-    console.log('clicked category', id);
+    router.push(`/?categoryId=${id}`, { scroll: false });
   };
 
   return (

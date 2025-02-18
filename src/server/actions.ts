@@ -7,8 +7,12 @@ import {
   CategorySchema,
 } from '@/types';
 
-export async function getPosts() {
-  const response = await fetch(`${process.env.ENDPOINT_URL}/posts`);
+export async function getPosts(categoryId?: string) {
+  const url = categoryId
+    ? `${process.env.ENDPOINT_URL}/posts?categoryId=${categoryId}`
+    : `${process.env.ENDPOINT_URL}/posts`;
+
+  const response = await fetch(url);
   const data = await response.json();
   const posts = PostsSchema.safeParse(data);
 
@@ -23,6 +27,7 @@ export async function getPost(id: string) {
   const response = await fetch(`${process.env.ENDPOINT_URL}/posts/${id}`);
   const data = await response.json();
   const post = PostSchema.safeParse(data);
+  console.log(data);
 
   if (!post.success) {
     throw new Error('Failed to parse post');
@@ -53,18 +58,4 @@ export async function getCategory(id: string) {
   }
 
   return category.data;
-}
-
-export async function getPostsByCategory(id: string) {
-  const response = await fetch(
-    `${process.env.ENDPOINT_URL}/posts?categoryId=${id}`
-  );
-  const data = await response.json();
-  const posts = PostsSchema.safeParse(data);
-
-  if (!posts.success) {
-    throw new Error('Failed to parse posts');
-  }
-
-  return posts.data;
 }

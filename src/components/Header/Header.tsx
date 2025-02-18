@@ -11,7 +11,9 @@ export function Header() {
       </div>
 
       <div className="container mx-auto flex items-center py-[60px]">
-        <h1 className="text-4xl font-bold">Blog edukacyjny</h1>
+        <Link href="/" className="text-4xl font-bold">
+          Blog edukacyjny
+        </Link>
       </div>
     </header>
   );
