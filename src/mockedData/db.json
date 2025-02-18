@@ -1,0 +1,122 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "wiedza",
+      "slug": "wiedza",
+      "image": "https://yikett6gfgxho8wj.public.blob.vercel-storage.com/cat1-wGmTZvc0owd04B09XJBj7zGruKzCvz.png",
+      "icon": "icon-1"
+    },
+    {
+      "id": "2",
+      "name": "inspiracje",
+      "slug": "inspiracje",
+      "image": "https://yikett6gfgxho8wj.public.blob.vercel-storage.com/cat2-7SjaI96chpi473nmJ6fH4xwcLOHcq2.png",
+      "icon": "icon-2"
+    },
+    {
+      "id": "3",
+      "name": "interpretacje",
+      "slug": "interpretacje",
+      "image": "https://yikett6gfgxho8wj.public.blob.vercel-storage.com/cat3-ACjqNMS2etR3W95AlbvhRPvRUKb3xc.png",
+      "icon": "icon-3"
+    },
+    {
+      "id": "4",
+      "name": "dostępne",
+      "slug": "dostępne",
+      "image": "https://yikett6gfgxho8wj.public.blob.vercel-storage.com/cat4-dawYOZZGwp0MPXMCKtnvsnvryzGopM.png",
+      "icon": "icon-4"
+    }
+  ],
+  "posts": [
+    {
+    "id": "1",
+    "title": "Proin semper mi orci, quis tempor enim placerat nec",
+    "slug": "proin-semper-mi-orci-quis-tempor-enim-placerat-nec-1",
+    "shortDescription": "Cras commodo, massa nec tempor posuere, sapien risus porttitor risus,  vitae maximus dui felis sed mi. Maecenas rutrum malesuada urna, in  luctus metus fringilla ac. Cras commodo, massa nec tempor posuere, sapien risus porttitor risus.",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "image": "https://yikett6gfgxho8wj.public.blob.vercel-storage.com/postImage-zlBJlsYb2oK4CGbxqccQH49OgNA00W.png",
+    "categoryId": "1",
+    "createdAt": "2021-01-01",
+    "updatedAt": "2021-01-01"
+  },
+  {
+    "id": "2",
+    "title": "Proin semper mi orci, quis tempor enim placerat nec",
+    "slug": "proin-semper-mi-orci-quis-tempor-enim-placerat-nec-2",
+    "shortDescription": "Cras commodo, massa nec tempor posuere, sapien risus porttitor risus,  vitae maximus dui felis sed mi. Maecenas rutrum malesuada urna, in  luctus metus fringilla ac. Cras commodo, massa nec tempor posuere, sapien risus porttitor risus.",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "image": "https://yikett6gfgxho8wj.public.blob.vercel-storage.com/postImage-zlBJlsYb2oK4CGbxqccQH49OgNA00W.png",
+    "categoryId": "2",
+    "createdAt": "2021-01-01",
+    "updatedAt": "2021-01-01"
+  },
+  {
+    "id": "3",
+    "title": "Proin semper mi orci, quis tempor enim placerat nec",
+    "slug": "proin-semper-mi-orci-quis-tempor-enim-placerat-nec-3",
+    "shortDescription": "Cras commodo, massa nec tempor posuere, sapien risus porttitor risus,  vitae maximus dui felis sed mi. Maecenas rutrum malesuada urna, in  luctus metus fringilla ac. Cras commodo, massa nec tempor posuere, sapien risus porttitor risus.",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "image": "https://yikett6gfgxho8wj.public.blob.vercel-storage.com/postImage-zlBJlsYb2oK4CGbxqccQH49OgNA00W.png",
+    "categoryId": "3",
+    "createdAt": "2021-01-01",
+    "updatedAt": "2021-01-01"
+  },
+  {
+    "id": "4",
+    "title": "Proin semper mi orci, quis tempor enim placerat nec",
+    "slug": "proin-semper-mi-orci-quis-tempor-enim-placerat-nec-4",
+    "shortDescription": "Cras commodo, massa nec tempor posuere, sapien risus porttitor risus,  vitae maximus dui felis sed mi. Maecenas rutrum malesuada urna, in  luctus metus fringilla ac. Cras commodo, massa nec tempor posuere, sapien risus porttitor risus.",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "image": "https://yikett6gfgxho8wj.public.blob.vercel-storage.com/postImage-zlBJlsYb2oK4CGbxqccQH49OgNA00W.png",
+    "categoryId": "4",
+    "createdAt": "2021-01-01",
+    "updatedAt": "2021-01-01"
+  },
+  {
+    "id": "5",
+    "title": "Proin semper mi orci, quis tempor enim placerat nec",
+    "slug": "proin-semper-mi-orci-quis-tempor-enim-placerat-nec-5",
+    "shortDescription": "Cras commodo, massa nec tempor posuere, sapien risus porttitor risus,  vitae maximus dui felis sed mi. Maecenas rutrum malesuada urna, in  luctus metus fringilla ac. Cras commodo, massa nec tempor posuere, sapien risus porttitor risus.",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "image": "https://yikett6gfgxho8wj.public.blob.vercel-storage.com/postImage-zlBJlsYb2oK4CGbxqccQH49OgNA00W.png",
+    "categoryId": "1",
+    "createdAt": "2021-01-01",
+    "updatedAt": "2021-01-01"
+  },
+  {
+    "id": "6",
+    "title": "Proin semper mi orci, quis tempor enim placerat nec",
+    "slug": "proin-semper-mi-orci-quis-tempor-enim-placerat-nec-6",
+    "shortDescription": "Cras commodo, massa nec tempor posuere, sapien risus porttitor risus,  vitae maximus dui felis sed mi. Maecenas rutrum malesuada urna, in  luctus metus fringilla ac. Cras commodo, massa nec tempor posuere, sapien risus porttitor risus.",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "image": "https://yikett6gfgxho8wj.public.blob.vercel-storage.com/postImage-zlBJlsYb2oK4CGbxqccQH49OgNA00W.png",
+    "categoryId": "2",
+    "createdAt": "2021-01-01",
+    "updatedAt": "2021-01-01"
+  },
+  {
+    "id": "7",
+    "title": "Proin semper mi orci, quis tempor enim placerat nec",
+    "slug": "proin-semper-mi-orci-quis-tempor-enim-placerat-nec-7",
+    "shortDescription": "Cras commodo, massa nec tempor posuere, sapien risus porttitor risus,  vitae maximus dui felis sed mi. Maecenas rutrum malesuada urna, in  luctus metus fringilla ac. Cras commodo, massa nec tempor posuere, sapien risus porttitor risus.",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "image": "https://yikett6gfgxho8wj.public.blob.vercel-storage.com/postImage-zlBJlsYb2oK4CGbxqccQH49OgNA00W.png",
+    "categoryId": "3",
+    "createdAt": "2021-01-01",
+    "updatedAt": "2021-01-01"
+  },
+  {
+    "id": "8",
+    "title": "Proin semper mi orci, quis tempor enim placerat nec",
+    "slug": "proin-semper-mi-orci-quis-tempor-enim-placerat-nec-8",
+    "shortDescription": "Cras commodo, massa nec tempor posuere, sapien risus porttitor risus,  vitae maximus dui felis sed mi. Maecenas rutrum malesuada urna, in  luctus metus fringilla ac. Cras commodo, massa nec tempor posuere, sapien risus porttitor risus.",
+    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "image": "https://yikett6gfgxho8wj.public.blob.vercel-storage.com/postImage-zlBJlsYb2oK4CGbxqccQH49OgNA00W.png",
+    "categoryId": "4",
+    "createdAt": "2021-01-01",
+      "updatedAt": "2021-01-01"
+    }
+  ]
+}
