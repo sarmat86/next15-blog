@@ -1,0 +1,28 @@
+:root {
+  --swiper-pagination-top: 0px;
+}
+
+.wrapper {
+  padding-top: 40px;
+}
+
+.bullet {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  opacity: 1;
+  cursor: pointer;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+.bulletWrapper {
+  top: -20px;
+}
+
+.bulletActive {
+  background-color: black;
+  color: white;
+}

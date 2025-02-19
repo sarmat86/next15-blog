@@ -10,12 +10,13 @@ export function CategoryTile({ category }: { category: Category }) {
   const handleClickCategory = (id: string) => {
     router.push(`/?categoryId=${id}`, { scroll: false });
   };
-
   return (
     <button
       onClick={() => handleClickCategory(category.id)}
       key={category.id}
-      className="group relative overflow-hidden bg-[#444E8D] rounded-br-[60px] rounded-tl-[60px] h-[457px]"
+      className={
+        'w-full group relative overflow-hidden rounded-br-[60px] rounded-tl-[60px] h-[457px]'
+      }
     >
       <div className="relative h-[50%]">
         <Image
@@ -26,9 +27,8 @@ export function CategoryTile({ category }: { category: Category }) {
         />
       </div>
       <div
-        className={`flex flex-col p-6  h-[50%]  items-center justify-center bg-[${
-          category.color || '#444E8D'
-        }]`}
+        className="flex flex-col p-6  h-[50%]  items-center justify-center"
+        style={{ backgroundColor: category.color || '#444E8D' }}
       >
         <span className="text-white font-bold uppercase mb-8">
           {category.name}

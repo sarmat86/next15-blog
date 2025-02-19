@@ -6,13 +6,13 @@ export async function PostsList({ categoryId }: { categoryId: string }) {
 
   return (
     <section className="py-12">
-      <div className="container mx-auto">
-        <div className="flex justify-between items-center mb-8">
+      <div className="container px-4 mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <h2 className="text-2xl font-bold">Wpisy</h2>
           <Filters />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 ">
           {posts.map((post) => (
             <PostTile key={post.id} post={post} />
           ))}
