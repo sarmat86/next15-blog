@@ -2,20 +2,32 @@
 
 import { Category } from '@/types';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export function CategoryTile({ category }: { category: Category }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handleClickCategory = (id: string) => {
-    router.push(`/?categoryId=${id}`, { scroll: false });
+    const categoriesParam = searchParams.get('categories')?.split(',') || [];
+
+    if (categoriesParam.includes(id)) {
+      return;
+    }
+
+    categoriesParam.push(id);
+
+    router.push(`/?categories=${categoriesParam.join(',')}`, {
+      scroll: false,
+    });
   };
+
   return (
     <button
       onClick={() => handleClickCategory(category.id)}
       key={category.id}
       className={
-        'w-full group relative overflow-hidden rounded-br-[60px] rounded-tl-[60px] h-[457px]'
+        'w-full group relative overflow-hidden rounded-br-[60px] rounded-tl-[60px] h-[457px] hover:opacity-80 transition-opacity duration-300'
       }
     >
       <div className="relative h-[50%]">

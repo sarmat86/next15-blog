@@ -1,5 +1,6 @@
 :root {
   --swiper-pagination-top: 0px;
+  --swiper-pagination-bottom: unset;
 }
 
 .wrapper {
@@ -19,7 +20,7 @@
 }
 
 .bulletWrapper {
-  top: -20px;
+  bottom: unset !important;
 }
 
 .bulletActive {

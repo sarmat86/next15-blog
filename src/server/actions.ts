@@ -7,10 +7,11 @@ import {
   CategorySchema,
 } from '@/types';
 
-export async function getPosts(categoryId?: string) {
-  const url = categoryId
-    ? `${process.env.ENDPOINT_URL}/posts?categoryId=${categoryId}`
-    : `${process.env.ENDPOINT_URL}/posts`;
+export async function getPosts(categories?: string[]) {
+  const url =
+    categories && categories.length > 0
+      ? `${process.env.ENDPOINT_URL}/posts?categoryId=[${categories.join(',')}]`
+      : `${process.env.ENDPOINT_URL}/posts`;
 
   const response = await fetch(url);
   const data = await response.json();
