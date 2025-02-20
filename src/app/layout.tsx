@@ -4,6 +4,7 @@ import './globals.css';
 import { Header } from '@/components';
 import { Footer } from '@/components';
 import { CategoriesProvider } from '@/context/CategoriesProvider';
+import { FavouritePostsProvider } from '@/context/FavouritePostsProvider';
 import { getCategories } from '@/server/actions';
 
 const geistSans = Geist({
@@ -35,7 +36,7 @@ export default async function RootLayout({
       >
         <Header />
         <CategoriesProvider categories={categories}>
-          {children}
+          <FavouritePostsProvider>{children}</FavouritePostsProvider>
         </CategoriesProvider>
         <Footer />
       </body>

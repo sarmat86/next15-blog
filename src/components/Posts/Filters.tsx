@@ -3,6 +3,7 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useCategories } from '@/context/CategoriesProvider';
 import { X } from 'lucide-react';
+import { cn } from '@/utils/utils';
 
 export default function Filters() {
   const router = useRouter();
@@ -10,7 +11,7 @@ export default function Filters() {
   const searchParams = useSearchParams();
 
   const categoriesParam = searchParams.get('categories')?.split(',') || [];
-
+  const favouriteParam = searchParams.get('favourite') === 'true';
   const filters = categories.filter((category) => {
     return categoriesParam.includes(category.id);
   });
@@ -22,6 +23,10 @@ export default function Filters() {
 
   const handleClearFilters = () => {
     router.push('/', { scroll: false });
+  };
+
+  const handleToggleFavouritePosts = (isFavourite: boolean) => {
+    router.push(`/?favourite=${isFavourite}`, { scroll: false });
   };
 
   return (
@@ -50,7 +55,18 @@ export default function Filters() {
           WSZYSTKIE
         </button>
         <span className="text-gray-400">|</span>
-        <button className="text-gray-400">ULUBIONE</button>
+        <button
+          className={cn(
+            'text-gray-400 flex items-center gap-2',
+            favouriteParam && 'text-red-800 underline'
+          )}
+          onClick={() => handleToggleFavouritePosts(!favouriteParam)}
+        >
+          ULUBIONE
+          {favouriteParam && (
+            <X className="w-4 h-4 text-black" strokeWidth={3} />
+          )}
+        </button>
       </div>
     </div>
   );

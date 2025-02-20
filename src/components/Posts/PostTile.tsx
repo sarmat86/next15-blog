@@ -4,7 +4,7 @@ import { Post } from '@/types';
 import Link from 'next/link';
 import { useCategory } from '@/context/CategoriesProvider';
 
-export default function PostTile({ post }: { post: Post }) {
+export function PostTile({ post }: { post: Post }) {
   const category = useCategory(post.categoryId);
 
   return (
@@ -19,7 +19,11 @@ export default function PostTile({ post }: { post: Post }) {
         {category?.name}
       </div>
 
-      <h3 className="mt-4 text-2xl font-serif font-bold mb-8">{post.title}</h3>
+      <Link href={`/posts/${post.id}`}>
+        <h3 className="mt-4 text-2xl font-serif font-bold mb-8">
+          {post.title}
+        </h3>
+      </Link>
 
       <time className="block text-lg bold mb-8">
         {new Date(post.createdAt).toLocaleDateString('pl-PL')}
@@ -37,5 +41,18 @@ export default function PostTile({ post }: { post: Post }) {
         </svg>
       </Link>
     </article>
+  );
+}
+
+export function PostTileSkeleton() {
+  return (
+    <div className="w-full h-[579px] bg-gray-200 animate-pulse rounded-br-[53.09px] rounded-tl-[53.09px]">
+      <div className="relative h-[50%]">
+        <div className="w-full h-full bg-gray-200 animate-pulse"></div>
+      </div>
+      <div className="flex flex-col p-6  h-[50%]  items-center justify-center">
+        <div className="w-full h-full bg-gray-200 animate-pulse"></div>
+      </div>
+    </div>
   );
 }

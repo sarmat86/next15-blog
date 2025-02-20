@@ -74,3 +74,9 @@ function CategoryIcon({
     />
   );
 }
+
+export function CategoryTileSkeleton() {
+  return (
+    <div className="w-full h-[457px] bg-gray-200 animate-pulse rounded-br-[60px] rounded-tl-[60px]"></div>
+  );
+}

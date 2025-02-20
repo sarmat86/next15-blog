@@ -30,8 +30,3 @@ export const PostsSchema = z.array(PostSchema);
 
 export type Posts = z.infer<typeof PostsSchema>;
 export type Post = z.infer<typeof PostSchema>;
-
-export type AppState = {
-  id: string;
-  favouriteCategories: string[];
-};
