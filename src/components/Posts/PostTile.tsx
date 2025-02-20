@@ -10,7 +10,7 @@ export function PostTile({ post }: { post: Post }) {
   return (
     <article
       key={post.id}
-      className="bg-[#F4F4F4] p-10 h-[579px] rounded-br-[53.09px] rounded-tl-[53.09px]"
+      className="bg-[#F4F4F4] p-10 h-[579px] rounded-br-[53px] rounded-tl-[53px]"
     >
       <div
         className={`text-sm font-medium uppercase underline`}
@@ -46,7 +46,7 @@ export function PostTile({ post }: { post: Post }) {
 
 export function PostTileSkeleton() {
   return (
-    <div className="w-full h-[579px] bg-gray-200 animate-pulse rounded-br-[53.09px] rounded-tl-[53.09px]">
+    <div className="w-full h-[579px] bg-gray-200 animate-pulse rounded-br-[53px] rounded-tl-[53px]">
       <div className="relative h-[50%]">
         <div className="w-full h-full bg-gray-200 animate-pulse"></div>
       </div>

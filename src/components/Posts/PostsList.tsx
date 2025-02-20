@@ -57,6 +57,10 @@ export function PostsListSkeleton() {
           <PostTileSkeleton />
           <PostTileSkeleton />
           <PostTileSkeleton />
+          <PostTileSkeleton />
+          <PostTileSkeleton />
+          <PostTileSkeleton />
+          <PostTileSkeleton />
         </div>
       </div>
     </section>

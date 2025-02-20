@@ -8,8 +8,15 @@ export default function loading() {
           Blog edukacyjny
         </Link>
       </div>
-      <CategoriesSkeleton />
-      <PostsListSkeleton />
+      <section className="py-12 bg-[#F4F4F4]">
+        <div className="container mx-auto px-4">
+          <h2 className="hidden xl:block text-2xl font-bold mb-8">Kategorie</h2>
+          <CategoriesSkeleton />
+        </div>
+      </section>
+      <section className="py-12">
+        <PostsListSkeleton />
+      </section>
     </div>
   );
 }

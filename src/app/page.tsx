@@ -9,7 +9,6 @@ export default async function Home({
 }) {
   const { categories, favourite } = await searchParams;
   const categoriesArray = categories ? categories.split(',') : [];
-
   const posts = await getPosts(categoriesArray);
 
   return (

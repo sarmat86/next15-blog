@@ -3,6 +3,7 @@
 import { Category } from '@/types';
 import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { cn } from '@/utils/utils';
 
 export function CategoryTile({ category }: { category: Category }) {
   const router = useRouter();
@@ -75,8 +76,17 @@ function CategoryIcon({
   );
 }
 
-export function CategoryTileSkeleton() {
+export function CategoryTileSkeleton({ className }: { className?: string }) {
   return (
-    <div className="w-full h-[457px] bg-gray-200 animate-pulse rounded-br-[60px] rounded-tl-[60px]"></div>
+    <div
+      className={cn(
+        'w-full h-[457px] bg-gray-200 animate-pulse overflow-hidden rounded-br-[60px] rounded-tl-[60px]',
+        className
+      )}
+    >
+      <div className="relative h-[50%]">
+        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+      </div>
+    </div>
   );
 }
