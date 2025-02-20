@@ -12,16 +12,6 @@ export default async function PostPage({
   const { id } = await params;
   const post = await getPost(id);
 
-  if (!post) {
-    return (
-      <div>
-        <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-bold mb-4">Nie znaleziono posta</h1>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="container mx-auto px-4">
       <div className="flex flex-col lg:flex-row items-start lg:items-center py-[60px] justify-between">
@@ -32,22 +22,28 @@ export default async function PostPage({
           <ArrowLeft className="w-6 h-6" />
           Blog edukacyjny
         </Link>
-        <AddToFavorite id={post.id} />
+        {post && <AddToFavorite id={post.id} />}
       </div>
-      <div className="flex flex-col gap-4">
-        <h1 className="text-2xl font-bold mb-4">{post.title}</h1>
-        <p className="text-gray-500 mb-4">{post.shortDescription}</p>
-        <div className="flex flex-col gap-4 mb-4">
-          <p className="text-gray-500">{post.content}</p>
-          <Image
-            src={post.image}
-            alt={post.title}
-            width={1000}
-            height={1000}
-            className="rounded-lg max-full mb-4"
-          />
+      {post ? (
+        <div className="flex flex-col gap-4">
+          <h1 className="text-2xl font-bold mb-4">{post.title}</h1>
+          <p className="text-gray-500 mb-4">{post.shortDescription}</p>
+          <div className="flex flex-col gap-4 mb-4">
+            <p className="text-gray-500">{post.content}</p>
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={1000}
+              height={1000}
+              className="rounded-lg max-full mb-4"
+            />
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="flex flex-col gap-4">
+          <h1 className="text-2xl font-bold mb-4">Nie znaleziono posta</h1>
+        </div>
+      )}
     </div>
   );
 }
