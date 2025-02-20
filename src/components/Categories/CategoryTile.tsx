@@ -4,12 +4,23 @@ import { Category } from '@/types';
 import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { cn } from '@/utils/utils';
+import { RefObject } from 'react';
 
-export function CategoryTile({ category }: { category: Category }) {
+export function CategoryTile({
+  category,
+  ref = null,
+}: {
+  category: Category;
+  ref?: RefObject<HTMLElement | null> | null;
+}) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
   const handleClickCategory = (id: string) => {
+    if (ref) {
+      ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     const categoriesParam = searchParams.get('categories')?.split(',') || [];
 
     if (categoriesParam.includes(id)) {
