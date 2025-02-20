@@ -71,3 +71,11 @@ export default function Filters() {
     </div>
   );
 }
+
+export function FiltersSkeleton() {
+  return (
+    <div className="flex flex-col lg:flex-row lg:items-center gap-4 mb-8 min-h-[32px]">
+      <h2 className="text-2xl font-bold">Wpisy</h2>
+    </div>
+  );
+}

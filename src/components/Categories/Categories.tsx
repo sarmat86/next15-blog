@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import styles from './swiper.module.css';
 import { useEffect, useState } from 'react';
+
 export function Categories() {
   const categories = useCategories();
   const [isLoading, setIsLoading] = useState(true);
@@ -29,7 +30,9 @@ export function Categories() {
         {isLoading ? (
           <CategoriesSkeleton />
         ) : (
-          <div className="w-full relative px-10 xl:px-0">
+          <div
+            className={`${styles.categoriesWrapper} w-full relative px-10 xl:px-0`}
+          >
             <Swiper
               className={styles.wrapper}
               modules={[Pagination, Navigation]}
