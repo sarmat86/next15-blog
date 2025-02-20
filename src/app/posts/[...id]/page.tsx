@@ -1,5 +1,4 @@
 import { getPost } from '@/server/actions';
-import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
@@ -12,9 +11,17 @@ export default async function PostPage({
 }) {
   const { id } = await params;
   const post = await getPost(id);
+
   if (!post) {
-    return notFound();
+    return (
+      <div>
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl font-bold mb-4">Nie znaleziono posta</h1>
+        </div>
+      </div>
+    );
   }
+
   return (
     <div className="container mx-auto px-4">
       <div className="flex flex-col lg:flex-row items-start lg:items-center py-[60px] justify-between">

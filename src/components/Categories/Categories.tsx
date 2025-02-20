@@ -18,6 +18,10 @@ export function Categories() {
     setIsLoading(false);
   }, []);
 
+  if (categories.length === 0) {
+    return null;
+  }
+
   return (
     <section className="py-12 bg-[#F4F4F4]">
       <div className="container mx-auto px-4">

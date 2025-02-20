@@ -8,45 +8,61 @@ import {
 } from '@/types';
 
 export async function getPosts(categories?: string[]) {
-  const url =
-    categories && categories.length > 0
-      ? `${process.env.ENDPOINT_URL}/posts?categoryId=[${categories.join(',')}]`
-      : `${process.env.ENDPOINT_URL}/posts`;
+  try {
+    const url =
+      categories && categories.length > 0
+        ? `${process.env.ENDPOINT_URL}/posts?categoryId=[${categories.join(
+            ','
+          )}]`
+        : `${process.env.ENDPOINT_URL}/posts`;
 
-  const response = await fetch(url);
-  const data = await response.json();
-  const posts = PostsSchema.safeParse(data);
+    const response = await fetch(url);
+    const data = await response.json();
+    const posts = PostsSchema.safeParse(data);
 
-  if (!posts.success) {
-    throw new Error('Failed to parse posts');
+    if (!posts.success) {
+      return [];
+    }
+
+    return posts.data;
+  } catch (error) {
+    console.error(error);
+    return [];
   }
-
-  return posts.data;
 }
 
 export async function getPost(id: string) {
-  const response = await fetch(`${process.env.ENDPOINT_URL}/posts/${id}`);
-  const data = await response.json();
-  const post = PostSchema.safeParse(data);
-  console.log(data);
+  try {
+    const response = await fetch(`${process.env.ENDPOINT_URL}/posts/${id}`);
+    const data = await response.json();
+    const post = PostSchema.safeParse(data);
 
-  if (!post.success) {
-    throw new Error('Failed to parse post');
+    if (!post.success) {
+      return null;
+    }
+
+    return post.data;
+  } catch (error) {
+    console.error(error);
+    return null;
   }
-
-  return post.data;
 }
 
 export async function getCategories() {
-  const response = await fetch(`${process.env.ENDPOINT_URL}/categories`);
-  const data = await response.json();
-  const categories = CategoriesSchema.safeParse(data);
+  try {
+    const response = await fetch(`${process.env.ENDPOINT_URL}/categories`);
+    const data = await response.json();
+    const categories = CategoriesSchema.safeParse(data);
 
-  if (!categories.success) {
-    throw new Error('Failed to parse categories');
+    if (!categories.success) {
+      return [];
+    }
+
+    return categories.data;
+  } catch (error) {
+    console.error(error);
+    return [];
   }
-
-  return categories.data;
 }
 
 export async function getCategory(id: string) {
@@ -55,7 +71,7 @@ export async function getCategory(id: string) {
   const category = CategorySchema.safeParse(data);
 
   if (!category.success) {
-    throw new Error('Failed to parse category');
+    return null;
   }
 
   return category.data;
